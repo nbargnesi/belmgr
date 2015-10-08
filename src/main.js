@@ -1,3 +1,4 @@
+import config from './authConfig';
 import {LogManager} from 'aurelia-framework';
 import {CustomLogAppender} from './resources/CustomLogAppender';
 import {ConsoleAppender} from 'aurelia-logging-console';
@@ -15,7 +16,11 @@ export function configure(aurelia) {
     .plugin('aurelia-validation')
     .plugin("aurelia-gravatar")
     .plugin('aurelia-animator-css')
-    .plugin('aurelia-dialog');
+    .plugin('aurelia-dialog')
+    .plugin('aurelia-auth',
+        (baseConfig) => {
+          baseConfig.configure(config);
+        });
 
   aurelia.start().then(a => a.setRoot());
 }

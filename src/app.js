@@ -1,7 +1,18 @@
 import 'bootstrap';
 // import 'bootstrap/css/bootstrap.css!';
 
+import {inject} from 'aurelia-framework';
+import {Router} from 'aurelia-router';
+import HttpClientConfig from 'aurelia-auth/app.httpClient.config';
+
+@inject(Router, HttpClientConfig)
 export class App {
+
+  constructor(router, httpClientConfig) {
+    this.router = router;
+    this.httpClientConfig = httpClientConfig;
+  }
+
   configureRouter(config, router){
     config.title = 'BEL Manager';
     config.map([
@@ -14,7 +25,9 @@ export class App {
 
     this.router = router;
   }
+
+  activate() {
+    this.httpClientConfig.configure();
+  }
 }
-
-
 
