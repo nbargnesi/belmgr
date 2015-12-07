@@ -20,7 +20,8 @@ export class App {
       { route: 'search',        moduleId: './search',     name: 'search',   nav: true,  title:'Search' },
       { route: 'edit/:id',      moduleId: './edit',       name: 'edit',     nav: false,  title:'Edit BEL' },
       { route: 'create',        moduleId: './edit',       name: 'create',   nav: true,  title:'New BEL' },
-      { route: 'about',         moduleId: './about',      name: 'about',    nav: true,  title:'About' }
+      { route: 'about',         moduleId: './about',      name: 'about',    nav: true,  title:'About' },
+      { route: 'login',         moduleId: './login',      name: 'login',    nav: false, title: 'Login' }
     ]);
 
     this.router = router;

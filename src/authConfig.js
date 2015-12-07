@@ -1,7 +1,9 @@
 var devCfg = {
   providers: {
     github: {
-      clientId: '29839cb8d6ae4a9565c1'
+      clientId: 'cfebeae3e7551e8e5ef5',
+      //redirectUri: window.location.origin + '/doobie',
+      popupOptions: { width: 1020, height: 618 }
     }
   }
 };
@@ -9,7 +11,9 @@ var devCfg = {
 var prodCfg = {
   providers: {
     github: {
-      clientId: '29839cb8d6ae4a9565c1'
+      clientId: 'cfebeae3e7551e8e5ef5',
+      //redirectUri: window.location.origin + '/bar',
+      popupOptions: { width: 1020, height: 618 }
     }
   }
 };
